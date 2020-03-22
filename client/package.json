@@ -1,0 +1,31 @@
+{
+  "name": "elefand19-client",
+  "version": "1.0.0",
+  "description": "Elefand19 - Aktuelle Informationen für Auslandsdeutsche",
+  "author": "Andreas Zoellner",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "preawspublish": "npm run generate",
+    "awspublish": "aws s3 cp --recursive dist/ s3://andreaszoellner.de",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "nuxt": "^2.12.0",
+    "rss-parser-browser": "^2.2.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.11.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0"
+  }
+}
